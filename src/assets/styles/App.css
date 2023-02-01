@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+* {
+ font-family: 'Montserrat', sans-serif;
+}
+
+body {
+ background-color: #161d31;
+}
+
+.App {
+ text-align: center;
+}
+
+.input-group {
+ width: 60%;
+}
+
+.card {
+ max-width: 60%;
+}
+
+.card-title {
+ position: absolute;
+ padding: 20px;
+}
+
+.card-date {
+ position: absolute;
+ margin-top: 60px;
+ padding-left: 20px;
+}
+
+.card-temperature {
+ position: absolute;
+ margin-top: 260px;
+ padding-left: 20px;
+ font-size: 50px;
+}
+
+.img-fluid {
+ height: 100%;
+}
+
+.card-description {
+ position: absolute;
+ margin-top: 320px;
+ padding-left: 20px;
+}
+
+@media (max-width: 1400px) {
+ .card {
+  max-width: 95%;
+ }
+
+ .card .card-temperature {
+  margin-top: 34%;
+ }
+
+ .card .card-description {
+  margin-top: 43%;
+ }
+
+ .card h5 {
+  font-size: 15px;
+ }
+
+ .card span {
+  font-size: 14px;
+ }
+
+ p.description {
+  font-size: 11px;
+ }
+
+ p.hour {
+  font-size: 13px;
+ }
+
+ p.temperature {
+  margin-top: -20px;
+  font-size: 13px;
+ }
+}
+
+@media (max-width:767px) {
+ .card .card-temperature {
+  margin-top: 120%;
+ }
+
+ .card .card-description {
+  margin-top: 135%;
+ } 
+
+ .card h5 {
+  font-size: 16px;
+ }
+
+ .card span {
+  font-size: 15px;
+ }
+
+ p.description {
+  font-size: 15px;
+ }
+}
