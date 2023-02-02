@@ -21,36 +21,48 @@ body {
 }
 
 .card-title {
+ width: 33.5%;
  position: absolute;
  padding: 20px;
+ font-size: 24px;
 }
 
 .card-date {
+ width: 31%;
  position: absolute;
- margin-top: 60px;
+ margin-top: 90px;
  padding-left: 20px;
 }
 
 .card-temperature {
  position: absolute;
- margin-top: 260px;
+ margin-top: 290px;
  padding-left: 20px;
  font-size: 50px;
 }
 
 .img-fluid {
+ width: 320px;
  height: 100%;
 }
 
 .card-description {
  position: absolute;
- margin-top: 320px;
+ margin-top: 350px;
  padding-left: 20px;
 }
 
 @media (max-width: 1400px) {
+ .input-group {
+  max-width: 95%;
+ }
+
  .card {
   max-width: 95%;
+ }
+
+ .card-title {
+  font-size: 22px;
  }
 
  .card .card-temperature {
@@ -84,8 +96,21 @@ body {
 }
 
 @media (max-width:767px) {
+ .img-fluid {
+  width: 100%;
+ }
+
+ .card-title {
+  width: 100%;
+ }
+
+ .card-date {
+  width: 100%;
+  padding-left: 0;
+ }
+
  .card .card-temperature {
-  margin-top: 120%;
+  margin-top: 110%;
  }
 
  .card .card-description {
