@@ -32,7 +32,7 @@ const Card = ({loadingData, showData, weather, forecast}) => {
  }
 
  if(showData) {
-  url = 'http://openweathermap.org/img/w/';
+  url = 'https://openweathermap.org/img/w/';
   iconUrl = url+weather.weather[0].icon+'.png';
 
   iconUrl3H = url+forecast.list[1].weather[0].icon+'.png';
@@ -61,11 +61,11 @@ const Card = ({loadingData, showData, weather, forecast}) => {
         </div>
         <div className='col-md-8'>
          <div className='card-body text-start mt-2'>
-          <h5 className='card-text'> <i class="fas fa-fire-alt"> </i> Temperatura máx.: <span> {(weather.main.temp_max - 273.15).toFixed(1)} ºC </span> </h5>
-          <h5 className='card-text'> <i class="fas fa-snowflake"> </i> Temperatura min.: <span> {(weather.main.temp_min - 273.15).toFixed(1)} ºC </span> </h5>
-          <h5 className='card-text'> <i class="fas fa-mitten"> </i> Sensación térmica: <span> {(weather.main.feels_like - 273.15).toFixed(1)} ºC </span> </h5>
-          <h5 className='card-text'> <i class="fas fa-tint"> </i> Humedad: <span> {weather.main.humidity}% </span> </h5>
-          <h5 className='card-text'> <i class="fas fa-wind"> </i> Velocidad del viento: <span> {weather.wind.speed} m/s </span> </h5>
+          <h5 className='card-text'> <i className='fas fa-fire-alt'> </i> Temperatura máx.: <span> {(weather.main.temp_max - 273.15).toFixed(1)} ºC </span> </h5>
+          <h5 className='card-text'> <i className='fas fa-snowflake'> </i> Temperatura min.: <span> {(weather.main.temp_min - 273.15).toFixed(1)} ºC </span> </h5>
+          <h5 className='card-text'> <i className='fas fa-mitten'> </i> Sensación térmica: <span> {(weather.main.feels_like - 273.15).toFixed(1)} ºC </span> </h5>
+          <h5 className='card-text'> <i className='fas fa-tint'> </i> Humedad: <span> {weather.main.humidity}% </span> </h5>
+          <h5 className='card-text'> <i className='fas fa-location-arrow'> </i> Velocidad del viento: <span> {weather.wind.speed} m/s </span> </h5>
          </div>
          <hr/>
          <div className='row mt-4'>

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const Form = ({newLocation}) => {
- const [city, setCity] = useState('');
+ const [city, setCity] = useState('San Salvador');
 
  const onSubmit = (event) => {
   console.log({city});
