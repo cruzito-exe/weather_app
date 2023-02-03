@@ -4,16 +4,14 @@ import Spinner from './Spinner';
 const Card = ({loadingData, showData, weather, forecast}) => {
  var today = new Date();
  var day = today.getDate();
- var month = today.getMonth()+1;
+ var month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
  var year = today.getFullYear();
 
  if(day <= 9) {
   day = '0'+day;
- } if(month <= 9) {
-  month = '0'+month;
  }
 
- var date = day+'/'+month+'/'+year;
+ var date = day+'/'+month[today.getMonth()]+'/'+year;
 
  var url = '';
  var iconUrl = '';
@@ -53,8 +51,7 @@ const Card = ({loadingData, showData, weather, forecast}) => {
       <div className='card mb-3 mx-auto bg-dark text-white'>
        <div className='row g-0'>
         <div className='col-md-4'>
-         <h3 className='card-title text-center'> {weather.name}, <span> {weather.sys.country} </span> </h3>
-         <p className='card-date text-center'> {date} </p>
+         <h3 className='card-title text-center'> {weather.name}, <span> {weather.sys.country} </span> <br/> <span> {date} </span> </h3>
          <h1 className='card-temperature'> {(weather.main.temp - 273.15).toFixed(1)} ºC </h1>
          <p className='card-description'> <img src={iconUrl} alt='icon'/> {weather.weather[0].description} </p>
          <img className='img-fluid rounded-start' src='https://images.pexels.com/photos/2793175/pexels-photo-2793175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='...'/>
@@ -90,7 +87,7 @@ const Card = ({loadingData, showData, weather, forecast}) => {
       </div>
      </div>
     ):(
-    <h2 className='text-white'> No hay datos para mostrar </h2>
+    <h2 className='text-white'> </h2>
     )
    }
   </div>

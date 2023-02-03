@@ -25,8 +25,12 @@ const WeatherPanel = () => {
    if(!response.ok) throw {response}
    return response.json();
   }).then((weatherData) => {
-   setWeather(weatherData);
-   console.log(weatherData);
+   if(weatherData.cod >= 400) {
+    setWeather(false);
+   } else {
+    setWeather(weatherData);
+    console.log(weatherData);
+   }
   }).catch(error => {
    console.log(error);
    setLoading(error);
